@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  font-family: "Open Sans", sans-serif;
+}
+/* particle background */
+#tsparticles {
+  z-index: -1;
+}
+/* preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: #0c0513;
+  background-image: url(../src/assets/images/pre.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#preloader-none {
+  opacity: 0;
+}
+
+#no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+/* logo */
+@import url("http://fonts.cdnfonts.com/css/agustina");
+#logo {
+  color: #6d00b7;
+  text-shadow: 1px 1px 2px #00759f, 0 0 1em #05008d, 0 0 0.2em #05008d;
+  font-family: "Agustina", sans-serif;
+  font-size: 2rem;
+}
+/* nav */
+.navlinks:hover {
+  color: #6d00b7;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #6d00b7;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/* wave */
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* bio up arrow */
+.bounce {
+  display: inline-block;
+  position: relative;
+  -moz-animation: bounce 0.5s infinite linear;
+  -o-animation: bounce 0.5s infinite linear;
+  -webkit-animation: bounce 0.5s infinite linear;
+  animation: bounce 0.5s infinite linear;
+  color: #6d00b7;
+  transform: scale(1.4);
+}
+html {
+  scroll-behavior: smooth;
+}
+@-webkit-keyframes bounce {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-moz-keyframes bounce {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-o-keyframes bounce {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-ms-keyframes bounce {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
+}
+/* down-arrow */
+.arrow {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 9px solid #6d00b7;
+  border-right: 9px solid #6d00b7;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 3s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+/* typewriter */
+.Typewriter__wrapper {
+  font-size: 2.2em;
+  color: #6d00b7;
+  font-weight: 600;
+}
+.Typewriter__cursor {
+  font-size: 2.4em;
+  color: #6d00b7;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+}
+
+.card-container {
+  position: relative;
+  width: 36rem;
+  height: 22rem;
+}
+
+.background-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.card-container svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #6d00b7;
+}
+
+.card-container svg:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+#article {
+  position: absolute;
+  width: 16rem;
+  height: 100%;
+  transition: all 1s;
+}
+
+.card {
+  -webkit-box-shadow: 1px 1px 15px 5px #614a9f;
+  box-shadow: 1px 1px 15px 5px #614a9f;
+  position: absolute;
+  height: 25rem;
+  width: 15rem;
+  margin: 1rem;
+  color: #fff;
+  /* background-color: #6d00b7; */
+  border-radius: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card img {
+  height: 13rem;
+  width: 15rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+  object-position: top;
+  pointer-events: none;
+}
+
+.prevCard {
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.activeCard {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nextCard {
+  left: 100%;
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: -1;
+}
+.skills,
+.summary {
+  font-size: 13px;
+}
+/* Carousel buttons */
+
+.leftBtn {
+  left: -1rem;
+}
+
+.rightBtn {
+  right: -1rem;
+}
+
+/* Paginator styles */
+.paginator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 30rem;
+  height: 2rem;
+}
+
+.hr {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #6d00b7;
+}
+
+.dot {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #6d00b7;
+  z-index: 1;
+  transition: all 1s;
+}
+
+.dot:hover {
+  cursor: pointer;
+}
+
+.dot.active {
+  box-shadow: 0 0 0 4px grey;
+  background-color: white;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bn30 {
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: white;
+}
+
+.bn30 .text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+}
+
+.bn30:after {
+  content: "";
+  border-radius: 10px;
+  position: absolute;
+  margin: 4px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: #212529;
+}
+
+.bn30:hover {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+}
+
+.bn30:hover .text {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+}
+
+/* tools */
+#tools {
+  border-radius: 15px;
+  box-shadow: 0 0 10px #6d00b7;
+  color: #fff;
+}
+.express {
+  font-family: "Helvetica Neue";
+}
+/* 
+resume */
+
+object {
+  border-radius: 10px;
+  box-shadow: 0 0 10px #6d00b7;
+  opacity: 85%;
+}
+
+.pdf {
+  color: #fff;
+}
+
+/* contact form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form,
+.message {
+  border: 1px solid #212529;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  padding: 1rem;
+}
+#sent-message {
+  margin-top: 1rem;
+}
+
+/* //project media queries */
+@media screen and (max-width: 425px) {
+  .container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .card-container {
+    width: 80%;
+  }
+
+  .prevCard {
+    left: -35%;
+  }
+
+  .nextCard {
+    left: 135%;
+  }
+}
+/* typewriter */
+@media (max-width: 767px) {
+  .Typewriter__wrapper {
+    font-size: 1.4em;
+    font-weight: 500;
+    position: absolute;
+  }
+  .Typewriter__cursor {
+    display: none;
+  }
+}
