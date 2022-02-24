@@ -1,4 +1,4 @@
-import * as FaIcons from "react-icons/fa";
+
 const Card = ({
   handlePointerEvent,
   title,

@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  Flex,
-  Image,
-  Container,
-  Heading,
-  Stack,
-  Text,
-  Button,
-  Icon,
-  IconProps,
-} from "@chakra-ui/react";
+import { Image, Container, Heading, Stack, Text } from "@chakra-ui/react";
 import avatar from "../assets/images/avatar.svg";
 import ScrollToTop from "./ScrollToTop";
 

@@ -11,9 +11,9 @@ import {
   VStack,
   IconButton,
   CloseButton,
-  Link,
   Text,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 
 function NavBar() {
@@ -51,7 +51,7 @@ function NavBar() {
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-              <Link href="/about" spacing="8">
+              <Link to="/about" spacing="8">
                 <Text
                   m={5}
                   fontSize="1.5rem"
@@ -60,7 +60,7 @@ function NavBar() {
                   About
                 </Text>
               </Link>
-              <Link href="/projects" spacing="8">
+              <Link to="/projects" spacing="8">
                 <Text
                   m={5}
                   fontSize="1.5rem"
@@ -69,7 +69,7 @@ function NavBar() {
                   Projects
                 </Text>
               </Link>
-              <Link href="/resume" spacing="8">
+              <Link to="/resume" spacing="8">
                 <Text
                   m={5}
                   fontSize="1.5rem"
@@ -115,13 +115,13 @@ function NavBar() {
                 />
 
                 <Button w="full" variant="ghost">
-                  <Link href="/about">About</Link>
+                  <Link to="/about">About</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  <Link href="/projects">Projects</Link>
+                  <Link to="/projects">Projects</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  <Link href="/resume">Resume</Link>
+                  <Link to="/resume">Resume</Link>
                 </Button>
               </VStack>
             </Box>
