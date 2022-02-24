@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -29,13 +29,14 @@ function App() {
           <Preloader load={load} />
           <ParticleBackground />
           <NavBar />
-          <Route exact path="/header" component={Header} />
-          <div>
+
+          <Switch>
+            <Route exact path="/" component={Header} />
             <Route exact path="/about" component={About} />
             <Route exact path="/projects" component={Projects} />
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/contact" component={Contact} />
-          </div>
+          </Switch>
           <Footer />
         </div>
       </ChakraProvider>
