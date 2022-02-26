@@ -29,9 +29,9 @@ function App() {
           <Preloader load={load} />
           <ParticleBackground />
           <NavBar />
-
+         
           <Switch>
-            <Route exact path="/" component={Header} />
+          <Route exact path="/" component={Header} />
             <Route exact path="/about" component={About} />
             <Route exact path="/projects" component={Projects} />
             <Route exact path="/resume" component={Resume} />
