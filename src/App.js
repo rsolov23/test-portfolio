@@ -9,7 +9,6 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Resume from "./components/Resume";
 import Contact from "./pages/Contact";
-import Volunteer from "./pages/test";
 import "./App.css";
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <ParticleBackground />
         <Nav />
-        <Test />
         <Route exact path="/" component={Header} />
         <Switch>
           <Route exact path="/about" component={About} />
