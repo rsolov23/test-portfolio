@@ -11,12 +11,12 @@ import {
   VStack,
   IconButton,
   CloseButton,
+  Link,
   Text,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 
-function Nav() {
+function NavBar() {
   const bg = useColorModeValue("white", "gray.800");
   const mobileNav = useDisclosure();
 
@@ -31,12 +31,7 @@ function Nav() {
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex>
-            <chakra.a
-              href="/header"
-              title="Nav"
-              display="flex"
-              alignItems="center"
-            >
+            <chakra.a href="/" title="Nav" display="flex" alignItems="center">
               <VisuallyHidden>&lt; Rachel Solov /&gt;</VisuallyHidden>
             </chakra.a>
             <chakra.a
@@ -56,7 +51,7 @@ function Nav() {
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-              <Link to="/about" spacing="8">
+              <Link href="/about" spacing="8">
                 <Text
                   m={5}
                   fontSize="1.5rem"
@@ -65,7 +60,7 @@ function Nav() {
                   About
                 </Text>
               </Link>
-              <Link to="/projects" spacing="8">
+              <Link href="/projects" spacing="8">
                 <Text
                   m={5}
                   fontSize="1.5rem"
@@ -74,7 +69,7 @@ function Nav() {
                   Projects
                 </Text>
               </Link>
-              <Link to="/resume" spacing="8">
+              <Link href="/resume" spacing="8">
                 <Text
                   m={5}
                   fontSize="1.5rem"
@@ -120,13 +115,13 @@ function Nav() {
                 />
 
                 <Button w="full" variant="ghost">
-                  <Link to="/about">About</Link>
+                  <Link href="/about">About</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  <Link to="/projects">Projects</Link>
+                  <Link href="/projects">Projects</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  <Link to="/resume">Resume</Link>
+                  <Link href="/resume">Resume</Link>
                 </Button>
               </VStack>
             </Box>
@@ -136,7 +131,7 @@ function Nav() {
     </React.Fragment>
   );
 }
-export default Nav;
+export default NavBar;
 // import React from "react";
 // import {
 //   chakra,

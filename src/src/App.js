@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Nav from "./components/NavBar";
+import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ParticleBackground from "./pages/Background";
 import Preloader from "./pages/Pre";
@@ -9,7 +9,6 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Resume from "./components/Resume";
 import Contact from "./pages/Contact";
-import Volunteer from "./pages/test";
 import "./App.css";
 
 function App() {
@@ -27,8 +26,7 @@ function App() {
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <ParticleBackground />
-        <Nav />
-        <Test />
+        <NavBar />
         <Route exact path="/" component={Header} />
         <Switch>
           <Route exact path="/about" component={About} />

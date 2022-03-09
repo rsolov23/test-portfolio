@@ -1,17 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
+  Button,
   Flex,
   Heading,
   Image,
   Stack,
   Text,
   useBreakpointValue,
+  IconButton,
 } from "@chakra-ui/react";
+import { HiOutlineChevronDoubleDown } from "react-icons/hi";
+import { BsArrowDownCircleFill } from "react-icons/bs";
 import about from "../assets/images/about.svg";
 import Type from "../pages/Type";
 import Bio from "../pages/Bio";
 
-function Header() {
+export default function Header() {
   return (
     <>
       <Stack
@@ -79,4 +84,3 @@ function Header() {
     </>
   );
 }
-export default Header;
